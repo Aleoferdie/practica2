@@ -1,27 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Gobierno de Navarra</title>
+	<title>Mi tienda</title>
 	<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' charset='UTF-8'/>
 	<link href='css/bootstrap.min.css' media='all' rel='stylesheet'/>
 	<link href='css/bootstrap.css' media='all' rel='stylesheet'/>
 	<link href="/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js'></script>
 	<script src='js/bootstrap.min.js'></script>
 	<script src='js/jquery.min.js'></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+
+		$(document).ready(function(){
+   			$("#imag1").click(function(){
+        		$("#informacion1").show();
+        		$("#informacion2").hide();
+        		$("#informacion3").hide();
+    		});
+    		$("#imag2").click(function(){
+        		$("#informacion1").hide();
+        		$("#informacion2").show();
+        		$("#informacion3").hide();
+    		});
+    		$("#imag3").click(function(){
+        		$("#informacion1").hide();
+        		$("#informacion2").hide();
+       			$("#informacion3").show();
+    		});
+		});
+		$( function() {
+    		$( "#tabs" ).tabs();
+  		} );
+
+	</script>
 
 </head>
 
 <body>
 
-	<header class="row bg-light">
+	<div class="bg-light" align="center">
 		<h1>Mi tienda</h1>
-	</header>
+	</div>
 
-	<div class="col-md-4">
-		
+	<img id="imag1" src="images/impreza1.jpg" width="400" height="250">
+	<img id="imag2" src="images/impreza1.jpg" width="400" height="250">
+	<img id="imag3" src="images/impreza1.jpg" width="400" height="250">
+
+  	<div id="tabs">
+  		<div>
+    		<a href="#tabs-1"><button class='btn btn-light'>Nunc tincidunt</button></a>
+    		<a href="#tabs-2"><button class='btn btn-light'>Proin dolor</button></a>
+    		<a href="#tabs-3"><button class='btn btn-light'>Aenean lacinia</button></a>
+  		</div>
+  		<div id="tabs-1">
+    		<p>Proin elit</p>
+  		</div>
+  		<div id="tabs-2">
+    		<p>Morbi.</p>
+  		</div>
+  		<div id="tabs-3">
+    		<p>Mauris eleifend</p>
+  		</div>
 	</div>
 
 </body>
