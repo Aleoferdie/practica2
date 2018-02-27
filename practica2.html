@@ -13,30 +13,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<script>
-
-		$(document).ready(function(){
-   			$("#imag1").click(function(){
-        		$("#informacion1").show();
-        		$("#informacion2").hide();
-        		$("#informacion3").hide();
-    		});
-    		$("#imag2").click(function(){
-        		$("#informacion1").hide();
-        		$("#informacion2").show();
-        		$("#informacion3").hide();
-    		});
-    		$("#imag3").click(function(){
-        		$("#informacion1").hide();
-        		$("#informacion2").hide();
-       			$("#informacion3").show();
-    		});
-		});
-		$( function() {
-    		$( "#tabs" ).tabs();
-  		} );
-
-	</script>
+	<script src="code.js"></script>
 
 </head>
 
@@ -60,9 +37,9 @@
 
   	<div id="tabs" class="mx-5 my-5">
   		<div>
-    		<a href="#tabs-1"><button class='btn btn-light'>DESCRIPCIÓN</button></a>
-    		<a href="#tabs-2"><button class='btn btn-light'>GALERÍA</button></a>
-    		<a href="#tabs-3"><button class='btn btn-light'>PRECIO</button></a>
+    		<button class='btn btn-light'>DESCRIPCIÓN</button>
+    		<button class='btn btn-light'>GALERÍA</button>
+    		<button class='btn btn-light'>PRECIO</button>
   		</div>
   		<div id="tabs-1">
     		<p>Proin elit</p>

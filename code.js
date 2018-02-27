@@ -1,0 +1,17 @@
+jQuery(document).ready(function(){
+   			$("#imag1").click(function(){
+        		$("#informacion1").show();
+        		$("#informacion2").hide();
+        		$("#informacion3").hide();
+    		});
+    		$("#imag2").click(function(){
+        		$("#informacion1").hide();
+        		$("#informacion2").show();
+        		$("#informacion3").hide();
+    		});
+    		$("#imag3").click(function(){
+        		$("#informacion1").hide();
+        		$("#informacion2").hide();
+       			$("#informacion3").show();
+    		});
+});
