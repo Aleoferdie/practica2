@@ -1,56 +1,139 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Mi tienda</title>
-	<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' charset='UTF-8'/>
-	<link href='css/bootstrap.min.css' media='all' rel='stylesheet'/>
-	<link href='css/bootstrap.css' media='all' rel='stylesheet'/>
-	<link href="/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src='js/bootstrap.min.js'></script>
-	<script src='js/jquery.min.js'></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<script src="js/code.js"></script>
+<!doctype html>
+<html lang="es">
+  	<head>
+		<meta charset="utf-8">
+		<title>Practica 2</title>
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="js/jquery.js"></script>
+		<script src="js/code.js"></script>
+        <style>
+            .table td {
+              padding: 0.75rem;
+              vertical-align: top;
+              border-top: 1px solid #ffffff;
+            }
+            .table th {
+              padding: 0.75rem;
+              vertical-align: top;
+              border-top: 1px solid #ffffff;
+            }
+            #tabla {
+            text-align: center;
+            }
+        </style>
+	</head>
+  	<body>
+    	<h2 class="bg-light" align="center">Tienda Alejandro, Chocarro y Santiago</h2>
+    	<br>
+    	<div class="container-fluid" style="margin-left: 1em;">
+    		<div class="row">
+    			<div class="col-4">
+    				<h3 class="text-center">K2 Pon2oon</h3>
+    				<br>
+    				<img id="img1" src="images/pon2oon1.jpg" alt="" class="mx-auto d-block" height="300">
+    			</div>
+    			<div class="col-4">
+    				<h3 class="text-center">Armada ARV 116</h3>
+    				<br>
+    				<img id="img2" src="images/armada1.jpg" alt="" class="mx-auto d-block" height="300">
+    			</div>
+    			<div class="col-4">
+    				<h3 class="text-center">Atomic Redster  S9</h3>
+    				<br>
+    				<img id="img3" src="images/atomic1.jpg" alt="" class="mx-auto d-block" height="300">
+    				<br>
+    			</div>
+    		</div>
+    		<div id="contenido" class="row" style="margin: 1em;">
+    			<p>Pinche en un producto para ver caracteristicas:</p>
+    			<br>
+    			<div id="pest" class="col-12">
+    				<div id="titulo" class="text-center"></div>
+                    <div class="text-center">
+    				<button id="btn1" class="btn btn-light pest" type="submit">GALERÍA</button>
+    				<button id="btn2" class="btn btn-light pest" type="submit">DESCRIPCIÓN</button>
+    				<button id="btn3" class="btn btn-light pest" type="submit">PRECIO</button>
+                    </div>
+    			</div>
+    			<div id="info" class="col-12">
 
-</head>
-
-<body>
-
-	<div class="bg-light" align="center">
-		<h1>Mi tienda</h1>
-	</div>
-
-	<div class="row">
-		<div class="col-4">
-			<img id="imag1" class="mx-auto" src="images/pon2oon1.jpg" height="300">
-		</div>
-		<div class="col-4">
-			<img id="imag2" src="images/armada1.jpg" height="300">
-		</div>
-		<div class="col-4">
-			<img id="imag3" src="images/atomic1.jpg" height="300">
-		</div>
-	</div>
-
-  	<div id="tabs" class="mx-5 my-5">
-  		<div>
-    		<button class='btn btn-light'>DESCRIPCIÓN</button>
-    		<button class='btn btn-light'>GALERÍA</button>
-    		<button class='btn btn-light'>PRECIO</button>
-  		</div>
-  		<div id="tabs-1">
-    		<p>Proin elit</p>
-  		</div>
-  		<div id="tabs-2">
-    		<p>Morbi.</p>
-  		</div>
-  		<div id="tabs-3">
-    		<p>Mauris eleifend</p>
-  		</div>
-	</div>
-
-</body>
-</html>		
+    			</div>
+    			<div id="visor" class="col-12">
+    				<br>
+					<table class="table" >
+					  	<tr>
+						    <td colspan="4"><img src="" id="1" alt="" class="mx-auto d-block i" style="max-height: 500px; max-width: 500px"></td>
+					 	</tr>
+					 	<br>
+					  	<tr>
+						    <td><img src="" id="2" alt="" class="mx-auto" style="max-height: 250px; max-width: 250px"></td>
+						    <td><img src="" id="3" alt="" class="mx-auto" style="max-height: 250px; max-width: 250px"></td>
+						    <td><img src="" id="4" alt="" class="mx-auto" style="max-height: 250px; max-width: 250px"></td>
+					  	</tr>
+					</table>
+    			</div>
+    			<div id="precio1" class="col-12 precios">
+    				<br>
+    				<p>Precio: 1000€</p>
+    				<input type="number" min="0" id="c1" value="0" class="f">
+    			</div>
+    			<div id="precio2" class="col-12 precios">
+    				<br>
+    				<p>Precio: 899€</p>
+    				<input type="number" min="0" id="c2" value="0" class="f">
+    			</div>
+    			<div id="precio3" class="col-12 precios">
+    				<br>
+    				<p>Precio: 799</p>
+    				<input type="number" min="0" id="c3" value="0" class="f">
+    			</div>
+    		</div>
+    		<div id="formulario" >
+    			<h5>Carrito de la compra</h5>
+    			<br>
+    			<div id="tabla" >
+	    			<form>
+	    				<table >
+						  	<tr>
+							    <th><p>Modelo</p></th>
+							    <th><p>Cantidad</p></th>
+							    <th><p>Precio Unitario</p></th>
+							    <th><p>Subtotal</p></th>
+						  	</tr>
+						  	<tr>
+							    <td><p>K2 Pon2oon</p></td>
+							    <td><p id="cant1" class="c">0</p></td>
+							    <td><p>1000</p></td>
+							    <td><p id="subtotal1">0</p></td>
+						 	</tr>
+						  	<tr>
+							    <td><p>Armada ARV 116</p></td>
+							    <td><p id="cant2" class="c">0</p></td>
+							    <td><p>899</p></td>
+							    <td><p id="subtotal2">0</p></td>
+						  	</tr>
+						  	<tr>
+							    <td><p>Atomic Redster S9</p></td>
+							    <td><p id="cant3" class="c">0</p></td>
+							    <td><p>799</p></td>
+							    <td><p id="subtotal3">0</p></td>
+						  	</tr>
+						  	<tr>
+							    <td></td>
+							    <td></td>
+							    <td><p><b>TOTAL:</b></p></td>
+							    <td><p><b id="total">0</b></p></td>
+						  	</tr>
+						</table>
+	    			</form>
+    			</div>
+    		</div>
+    	</div>
+  	</body>
+  	<script>
+		$('.pest').hide();
+		$('.precios').hide();
+		$('.f').val(0);
+		$('#visor').hide();
+	</script>
+</html>
